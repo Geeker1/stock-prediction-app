@@ -82,7 +82,7 @@ async function fetchReport(data) {
     ]
     
     try {
-        const url = 'https://api-worker.ledumibaakee.workers.dev'
+        const url = 'https://api-worker.ledumibaakee.workers.dev/api/get-report'
         
         const response = await fetch(url, {
             method: 'POST',
