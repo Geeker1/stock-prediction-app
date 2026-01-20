@@ -47,7 +47,7 @@ async function fetchStockData() {
     loadingArea.style.display = 'flex'
     try {
         const stockData = await Promise.all(tickersArr.map(async (ticker) => {
-            const url = `https://polygon-api-worker.guil-9d2.workers.dev/?ticker=${ticker}&startDate=${dates.startDate}&endDate=${dates.endDate}`
+            const url = `https://polygon-api-worker.ledumibaakee.workers.dev/?ticker=${ticker}&startDate=${dates.startDate}&endDate=${dates.endDate}`
             const response = await fetch(url)
             if (!response.ok) {
                 const errMsg = await response.text()
@@ -82,7 +82,7 @@ async function fetchReport(data) {
     ]
     
     try {
-        const url = 'https://openai-api-worker.guil-9d2.workers.dev'
+        const url = 'https://api-worker.ledumibaakee.workers.dev'
         
         const response = await fetch(url, {
             method: 'POST',
@@ -96,7 +96,7 @@ async function fetchReport(data) {
         if (!response.ok) {
             throw new Error(`Worker Error: ${data.error}`)
         }
-        renderReport(data.content)
+        renderReport(data.message.content)
     } catch (err) {
         console.error(err.message)
         loadingArea.innerText = 'Unable to access AI. Please refresh and try again'
