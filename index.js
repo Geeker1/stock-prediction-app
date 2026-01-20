@@ -47,7 +47,7 @@ async function fetchStockData() {
     loadingArea.style.display = 'flex'
     try {
         const stockData = await Promise.all(tickersArr.map(async (ticker) => {
-            const url = `https://polygon-api-worker.ledumibaakee.workers.dev/ticker/?ticker=${ticker}&startDate=${dates.startDate}&endDate=${dates.endDate}`
+            const url = `https://polygon-api-worker.ledumibaakee.workers.dev/api/ticker?ticker=${ticker}&startDate=${dates.startDate}&endDate=${dates.endDate}`
             const response = await fetch(url)
             if (!response.ok) {
                 const errMsg = await response.text()
