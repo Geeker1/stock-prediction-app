@@ -6,14 +6,21 @@ npm start
 ```
 
 Head over to https://vitejs.dev/ to learn more about configuring vite
-## About Scrimba
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Fullstack Developer Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
+## About Project
 
-- [Our courses](https://scrimba.com/courses)
-- [The Frontend Career Path](https://scrimba.com/fullstack-path-c0fullstack)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+This application provides AI-powered stock price predictions to help users make informed investment decisions.
 
-Happy Coding!
+### Features
+- **Ticker Selection**: Users can select multiple stock tickers to analyze
+- **Historical Price Analysis**: Retrieves and analyzes price movements for the past 3 days
+- **AI-Powered Predictions**: Feeds historical price data into OpenAI to generate intelligent predictions
+- **Interactive Results**: Displays prediction results as text in a user-friendly dialog
+
+### How It Works
+1. User selects stock tickers they want to analyze
+2. Application fetches price data for the selected stocks over the past 3 days
+3. Price movement data is processed and sent to OpenAI
+4. AI generates predictions based on historical patterns
+5. Results are presented to the user in an easy-to-read dialog format
+
